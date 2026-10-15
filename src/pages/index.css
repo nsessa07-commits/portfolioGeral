@@ -1,0 +1,846 @@
+/*main*/
+
+main{
+    width: 100vw;
+    height: auto;
+    grid-area: main;
+    padding-top: 100px;
+    
+}
+
+.imagem> img{
+
+    width:70%;
+    height: 70%;
+    border: 2px solid rgb(156, 152, 152);
+    border-radius: 0px 250px 0px 0px;
+    border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+    box-shadow: 0px 20px 50px rgb(0, 0, 0, 0.3);
+    aspect-ratio: 4/3;
+    object-fit: contain;
+    box-shadow: 0 5px 20px rgba(236, 236, 236, 0.55), 0 25px 60px rgba(0, 0, 0, 0.4);
+    transition: box-shadow 0.4s ease, transform 0.4s ease;
+    
+}
+.imagem{
+
+    width: 50%;
+    height:100%;
+    padding: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Recepcao{
+
+    width: 50%;
+    height:100%;
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.Recepcao div> h3,h6{
+
+    margin-top: 10px;
+    color: white;
+}
+
+main> section{
+
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: auto;
+
+} 
+@media(min-width:300px) and (max-width: 700px ) {
+
+    .container > nav{
+
+        display: none;
+        align-items: center;
+        justify-content: flex-end;
+        
+
+    }
+   .Menu{
+
+    margin-left: 50%;
+    display: flex;
+
+   }
+   main> section{
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    gap: 4px;
+    width: 100%;
+    height: auto;
+    padding: 0px;
+
+} 
+main section> .Recepcao{
+
+    width: 100%;
+    padding: 20px;
+    
+}
+main section > .imagem{
+
+        width: 100%;
+        padding:30px;
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* secção Habilidades: filtros + cartões interativos */
+
+
+.Minhas-Habilidades{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:20px;
+}
+.Hablilidades{
+    width: 60%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+    padding: 20px;
+}
+.Hablilidades> img{
+border: 2px solid white;
+    width: 47%;
+    height: 44%;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    object-fit: contain;      /* evita esticar a imagem, mantém proporção */
+    image-rendering: -webkit-optimize-contrast; /* melhora nitidez em navegadores WebKit */
+    padding: 10px;             /* dá um respiro para o ícone não colar na borda */
+    box-sizing: border-box;
+
+}
+.Hablilidades> img:hover{
+
+    background-color: white;
+}
+.Cont-Habilidades{
+ 
+   padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+
+
+.skills{
+
+    width: min(900px, 90%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+/* ---------- Filtros ---------- */
+
+.skills-filtros{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.filtro{
+
+    padding: 8px 18px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    background-color: transparent;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.filtro:hover{
+
+    border-color: #fff;
+    transform: translateY(-2px);
+}
+
+.filtro.ativo{
+
+    background-color: #fff;
+    border-color: #fff;
+    color: #000;
+}
+
+.filtro:focus-visible,
+.skill:focus-visible{
+
+    outline: 2px solid #fff;
+    outline-offset: 3px;
+}
+
+.skills-contador{
+
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* ---------- Cartões ---------- */
+
+.skills-grid{
+
+    list-style: none;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 16px;
+}
+
+.skill{
+
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 22px 12px 18px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background-color: rgb(18, 18, 18);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill.oculto{
+
+    display: none !important;
+}
+
+.skill img{
+
+    position: relative;
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.skill span{
+
+    position: relative;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.skill small{
+
+    position: relative;
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.skill:hover{
+
+    transform: translateY(-6px);
+    border-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+.skill:hover img{
+
+    transform: scale(1.12);
+}
+
+/* brilho que segue o rato (--x e --y vêm do habilidades.js) */
+.skill::before{
+
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(160px circle at var(--x, 50%) var(--y, 50%), rgba(255, 255, 255, 0.14), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.skill:hover::before{
+
+    opacity: 1;
+}
+
+/* entrada ao mudar de filtro ("backwards" para não bloquear o hover) */
+.skill.entrar{
+
+    animation: skill-entrar 0.45s ease backwards;
+}
+
+@keyframes skill-entrar{
+
+    from{ opacity: 0; transform: translateY(14px) scale(0.96); }
+    to{ opacity: 1; transform: none; }
+}
+
+@media (max-width: 480px){
+
+    .skills-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (prefers-reduced-motion: reduce){
+
+    .skill,
+    .skill img,
+    .filtro{ transition: none; }
+
+    .skill.entrar{ animation: none; }
+}
+
+
+/*Minhas Experiencias*/
+
+.Minhas-Experiencias{
+
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+    padding: 20px;
+    background-color: rgb(254, 254, 254);
+    align-items: center;
+    
+
+}
+.Minhas-Experiencias> h2{
+
+    color: rgb(18, 17, 17);
+} 
+.Minhas-Experiencias div> h1 ,h3, h6{
+
+    color: black;
+    background-color: #fff;
+}
+.Minhas-Experiencias> div{
+
+    width:60%;
+    border-radius: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+     box-sizing: border-box;
+    padding: 20px;
+
+}
+.Cards {
+    width:60%;
+    border-radius: 10px;
+    border: 2px solid rgb(24, 24, 24);
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #eef0f4;
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 80%;
+}
+
+
+
+.Cards:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+}
+.Cards> h1 h3 h6{
+
+    background-color: #fff;
+
+}
+/*SOBRE MIM*/
+
+.sobre-mim{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+/* perfil */
+.perfil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+}
+.foto{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    padding: 5px;
+    overflow: hidden;
+}
+/* anel animado */
+.foto::before{
+    content: '';
+    position: absolute;
+    inset: -50%;
+    background: conic-gradient(from 0deg, transparent 0 60%, white 100%);
+    animation: girarAnel 4s linear infinite;
+}
+.foto::after{
+    content: '';
+    position: absolute;
+    inset: 5px;
+    border-radius: 50%;
+    background: rgb(8, 8, 8);
+}
+.foto > img{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    transition: transform .5s ease;
+}
+.foto:hover > img{
+    transform: scale(1.06);
+}
+@keyframes girarAnel{
+    to{ transform: rotate(360deg); }
+}
+
+.tagline{
+    min-height: 1.4em;
+    opacity: .8;
+}
+.chips{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.chip{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    font-size: 13px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.04);
+    transition: background .25s ease, color .25s ease, transform .25s ease;
+}
+.chip:hover{
+    background: white;
+    color: black;
+    transform: translateY(-3px);
+}
+
+/* linha do tempo */
+.sobre-mim .sobreH{
+    width: 100%;
+    max-width: 760px;
+}
+.hist-linha{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 34px;
+}
+.hist-linha::before{
+    content: '';
+    position: absolute;
+    left: 13px;
+    top: 6px;
+    bottom: 6px;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.2);
+}
+.hist-item{
+    position: relative;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity .6s ease, transform .6s ease;
+}
+.hist-item.visivel{
+    opacity: 1;
+    transform: translateY(0);
+}
+.hist-ponto{
+    position: absolute;
+    left: -34px;
+    top: 14px;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    background-color: dimgray;
+    transition: transform .3s ease, background-color .3s ease, color .3s ease;
+}
+.hist-item:hover .hist-ponto{
+    transform: scale(1.2);
+    background-color: white;
+    color: black;
+}
+.hist-cartao{
+    padding: 16px 18px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.03);
+    transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+}
+.hist-item:hover .hist-cartao{
+    transform: translateX(6px);
+    border-color: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+.hist-cartao small{
+    opacity: .6;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+.hist-cartao h3{
+    margin: 4px 0 8px;
+}
+.hist-cartao p{
+    margin: 0;
+    line-height: 1.6;
+    opacity: .85;
+}
+
+/* citação */
+.citacao{
+    position: relative;
+    margin: 40px 0 0;
+    padding: 28px 24px 20px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-left: 4px solid white;
+    background: rgba(255, 255, 255, 0.04);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity .6s ease, transform .6s ease;
+}
+.citacao.visivel{
+    opacity: 1;
+    transform: translateY(0);
+}
+.citacao-icone{
+    opacity: .5;
+    margin-bottom: 8px;
+}
+.citacao-texto{
+    position: relative;
+    margin: 0;
+    line-height: 1.7;
+    font-style: italic;
+}
+/* o texto completo reserva o espaço; o digitado fica por cima */
+.citacao-texto .fantasma{
+    visibility: hidden;
+}
+.citacao-texto .digitado{
+    position: absolute;
+    inset: 0;
+}
+.citacao footer{
+    margin-top: 14px;
+    font-size: 13px;
+    opacity: .6;
+    text-align: right;
+}
+
+@media(min-width:300px) and (max-width: 700px ) {
+
+    .sobre-mim{
+        padding: 30px 16px;
+    }
+    .foto{
+        width: 160px;
+        height: 160px;
+    }
+    .hist-linha{
+        padding-left: 30px;
+    }
+    .hist-ponto{
+        left: -30px;
+    }
+    .hist-linha::before{
+        left: 11px;
+    }
+    .citacao{
+        padding: 22px 16px 16px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce){
+    .foto::before{ animation: none; }
+    .hist-item, .citacao, .hist-cartao, .chip, .foto > img{ transition: none; }
+}
+
+/*Projectos*/
+
+.Projectos-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    height: auto;
+}
+
+.Projectos-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.Projectos{
+    width: 100%;
+    height: auto;
+    padding: 16px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.03);
+    box-sizing: border-box;
+
+    /* estado inicial da animação de entrada */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity .6s ease, transform .6s ease, box-shadow .3s ease, border-color .3s ease;
+}
+.Projectos.visivel{
+    opacity: 1;
+    transform: translateY(0);
+}
+.Projectos.visivel:hover{
+    transform: translateY(-6px);
+    border-color: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+}
+
+.imagem7{
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    cursor: zoom-in;
+}
+.imagem7 > img{
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+    transition: transform .5s ease;
+}
+.imagem7:hover > img{
+    transform: scale(1.08);
+}
+.zoom-dica{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 4px 10px;
+    font-size: 12px;
+    color: white;
+    background: rgba(0, 0, 0, 0.65);
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+.imagem7:hover .zoom-dica{
+    opacity: 1;
+}
+
+.Descricao{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 20px;
+}
+.texto{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.texto.aberto{
+    -webkit-line-clamp: unset;
+    display: block;
+}
+.ver-mais{
+    align-self: flex-start;
+    background: none;
+    border: none;
+    color: inherit;
+    opacity: .7;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: underline;
+    transition: opacity .2s ease;
+}
+.ver-mais:hover{
+    opacity: 1;
+}
+
+.ferramentas{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 10px;
+    width: auto;
+    align-items: flex-start;
+}
+.icone{
+    position: relative;
+    display: inline-flex;
+    color: white;
+    border-radius: 10%;
+    background-color: dimgray;
+    padding: 7px;
+    margin-right: 4px;
+    cursor: pointer;
+    transition: transform .25s ease;
+}
+.icone:hover{
+    transform: translateY(-4px) scale(1.1);
+}
+/* tooltip com o nome da tecnologia */
+.icone::after{
+    content: attr(data-nome);
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 3px 8px;
+    font-size: 12px;
+    white-space: nowrap;
+    color: white;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 6px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s ease;
+}
+.icone:hover::after{
+    opacity: 1;
+}
+
+.Abrir{
+    padding-top: 20px;
+}
+.Abrir a{
+    display: inline-flex;
+    transition: transform .25s ease;
+}
+.Abrir a:hover{
+    transform: scale(1.2) rotate(-8deg);
+}
+
+.open{
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+}
+.open a{
+    display: inline-flex;
+    transition: transform .25s ease;
+}
+.open a:hover{
+    transform: translate(3px, -3px);
+}
+
+/* lightbox */
+.lightbox{
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.85);
+    cursor: zoom-out;
+    animation: aparecer .25s ease;
+}
+.lightbox img{
+    max-width: 95%;
+    max-height: 90vh;
+    border-radius: 16px;
+}
+@keyframes aparecer{
+    from{ opacity: 0; }
+    to{ opacity: 1; }
+}
+
+@media(min-width:300px) and (max-width: 700px ){
+    .Projectos-container{
+        padding: 20px;
+    }
+    .Projectos-grid{
+        grid-template-columns: 1fr;
+    }
+    .Projectos{
+        width: 100%;
+    }
+}
+
+/* respeita quem desactiva animações no sistema */
+@media (prefers-reduced-motion: reduce){
+    .Projectos, .imagem7 > img, .icone{
+        transition: none;
+    }
+}
+
+.Ponteiro::after{
+    content: '|';
+    animation: balancar 1s infinite;
+}
+@keyframes balancar {
+    from{ opacity: 1; }
+    to{ opacity: 0; }
+}
+.sobreH{
+    width: 50%;
+}

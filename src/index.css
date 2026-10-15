@@ -1,0 +1,71 @@
+*{
+  margin: 0;
+  padding: 0;
+  background-color: rgb(8, 8, 8);
+  color: white;
+  font-family: century gothic;
+  font-size: 14px;
+}
+
+/* ===== TEMA CLARO ===== */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+[data-tema="claro"] body {
+    background-color: #f4f4f2;
+    color: #111;
+}
+
+/* Projectos */
+.Abrir a,
+.open a {
+    color: white;
+}
+[data-tema="claro"] .Abrir a,
+[data-tema="claro"] .open a {
+    color: #111;
+}
+[data-tema="claro"] .Projectos {
+    border-color: rgba(0, 0, 0, 0.12);
+    background: rgba(0, 0, 0, 0.03);
+}
+[data-tema="claro"] .Projectos.visivel:hover {
+    border-color: rgba(0, 0, 0, 0.35);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Sobre mim */
+[data-tema="claro"] .foto::before {
+    background: conic-gradient(from 0deg, transparent 0 60%, #111 100%);
+}
+[data-tema="claro"] .foto::after {
+    background: #f4f4f2;
+}
+[data-tema="claro"] .chip {
+    border-color: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.04);
+}
+[data-tema="claro"] .chip:hover {
+    background: #111;
+    color: white;
+}
+[data-tema="claro"] .hist-linha::before {
+    background: rgba(0, 0, 0, 0.2);
+}
+[data-tema="claro"] .hist-item:hover .hist-ponto {
+    background-color: #111;
+    color: white;
+}
+[data-tema="claro"] .hist-cartao {
+    border-color: rgba(0, 0, 0, 0.12);
+    background: rgba(0, 0, 0, 0.03);
+}
+[data-tema="claro"] .hist-item:hover .hist-cartao {
+    border-color: rgba(0, 0, 0, 0.35);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+[data-tema="claro"] .citacao {
+    border-color: rgba(0, 0, 0, 0.12);
+    border-left-color: #111;
+    background: rgba(0, 0, 0, 0.04);
+}
