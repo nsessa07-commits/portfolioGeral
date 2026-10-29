@@ -1,9 +1,11 @@
 import './index.css'
 import { useState, useEffect, useRef } from 'react'
 import projeto1 from '../assets/SGVFRANUEL.PNG'
+import projecto3 from '../assets/Captura de Tela (211).png'
+
 import projecto2 from '../assets/Captura de Tela (149).png'
 import { FaGithub } from 'react-icons/fa'
-import { SiJavascript, SiMysql, SiNodedotjs, SiProgress, SiReact } from 'react-icons/si'
+import { SiJavascript, SiMysql, SiNodedotjs, SiProgress, SiReact, SiSupabase, SiVercel } from 'react-icons/si'
 import { MdOpenInNew } from 'react-icons/md'
 import csharp from '../assets/c_sharp_logo_48px.png'
 
@@ -28,8 +30,27 @@ const Projectos = [
             { nome: 'React', el: <SiReact size={20} /> },
             { nome: 'Node.js', el: <SiNodedotjs size={20} /> },
             { nome: 'JavaScript', el: <SiJavascript size={20} /> },
+            { nome: 'Supabase', el: <SiSupabase size={20} /> },
+            { nome: 'Vercel', el: <SiVercel size={20} /> },
+
         ],
-        github: 'https://github.com/...',
+        github: 'https://github.com/Manzambi07/Ecommerce',
+        abrir: '',
+    },
+    
+    {
+        img: [projecto3],
+        desc: 'Planilha Gestora',
+        text: 'O Planilha Gestora é um sistema de gestão de produtos, stock e faturação para pequenas e médias empresas. Este documento explica como instalar, configurar e utilizar o sistema e descreve o seu funcionamento técnico, para consulta dos utilizadores e da Administração Geral Tributária (AGT).',
+        icons: [
+            { nome: 'Progress', el: <SiProgress size={20} /> },
+            { nome: 'React', el: <SiReact size={20} /> },
+            { nome: 'Node.js', el: <SiNodedotjs size={20} /> },
+            { nome: 'JavaScript', el: <SiJavascript size={20} /> },
+            { nome: 'Supabase', el: <SiSupabase size={20} /> },
+            { nome: 'Vercel', el: <SiVercel size={20} /> },
+        ],
+        github: 'https://github.com/Manzambi07/Planilha-Gestora',
         abrir: '',
     },
 ]

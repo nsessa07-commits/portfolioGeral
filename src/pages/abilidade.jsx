@@ -32,52 +32,52 @@ export default function Habilidade() {
     },
 
     {
-        datacat: "frontend",
+        datacat: "backend",
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
         span: 'Node.js',
-        small: 'Front-end'
+        small: 'Back-end'
     },
 
     {
-        datacat: "frontend",
+        datacat: "backend",
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
         span: 'C#',
-        small: 'Front-end'
+        small: 'Back-end'
     },
 
     {
-        datacat: "frontend",
+        datacat: "backend",
         src: { img },
         span: 'C',
-        small: 'Front-end'
+        small: 'Back-end'
     },
 
     {
-        datacat: "frontend",
+        datacat: "basededados",
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
         span: 'PostgreSQL',
-        small: 'Front-end'
+        small: 'Base de Dados'
     },
 
     {
-        datacat: "frontend",
+        datacat: "basededados",
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
         span: 'MysQL',
-        small: 'Front-end'
+        small: 'Base de Dados'
     },
 
     {
-        datacat: "frontend",
+        datacat: "basededados",
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg",
         span: 'SQL-Server',
-        small: 'SQL-Server'
+        small: 'Base de Dados'
     },
 
     {
-        datacat: "frontend",
+        datacat: "basededados",
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg",
         span: 'SQLite',
-        small: 'Front-end'
+        small: 'basededados'
     },]
 
     return (
