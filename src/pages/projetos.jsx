@@ -41,7 +41,7 @@ const Projectos = [
     {
         img: [projecto3],
         desc: 'Planilha Gestora',
-        text: 'O Planilha Gestora é um sistema de gestão de produtos, stock e faturação para pequenas e médias empresas. Este documento explica como instalar, configurar e utilizar o sistema e descreve o seu funcionamento técnico, para consulta dos utilizadores e da Administração Geral Tributária (AGT).',
+        text: 'O Planilha Gestora é um sistema de gestão de produtos, stock e faturação para pequenas e médias empresas. Este documento explica como instalar, configurar e utilizar o sistema e descreve o seu funcionamento técnico, para consulta dos utilizadores e da Administração Geral Tributária (AGT). visitantes podem entrar pra usar o app email:admin@empresa.com senha:123',
         icons: [
             { nome: 'Progress', el: <SiProgress size={20} /> },
             { nome: 'React', el: <SiReact size={20} /> },
