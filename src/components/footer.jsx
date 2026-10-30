@@ -18,10 +18,7 @@ export default function Footer() {
 
                         <div className={style.cta}>
 
-                            <div className={style.logo}>
-                                <img src='' alt="logo" />
-                            </div>
-
+                           
                             <span className={style.rotulo}>Contacto</span>
                             <h2 className={style.titulo}>Vamos conversar sobre o que precisa.</h2>
 
