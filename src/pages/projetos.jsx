@@ -51,7 +51,7 @@ const Projectos = [
             { nome: 'Vercel', el: <SiVercel size={20} /> },
         ],
         github: 'https://github.com/Manzambi07/Planilha-Gestora',
-        abrir: '',
+        abrir: 'https://planilha-gestora-6ansb01re-manzambi07.vercel.app',
     },
 ]
 
