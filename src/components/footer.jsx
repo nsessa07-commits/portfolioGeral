@@ -51,7 +51,7 @@ export default function Footer() {
                         <div className={style.sociais}>
                             <a href="mailto:nsessa07@gmail.com" aria-label="Email"><Mail size={18} /></a>
                             <a href="tel:+244975074442" aria-label="Telefone"><Phone size={18} /></a>
-                            <a href="#rodape" aria-label="Localização"><MapPin size={18} /></a>
+                            <a href="" aria-label="Localização"> <abbr title="Residente em Uige"><MapPin size={18} /></abbr></a>
                         </div>
 
                     </div>
